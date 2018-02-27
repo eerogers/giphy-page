@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Character Gif Search</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredoka+One|Inconsolata" rel="stylesheet">
 </head>
 <body>
-
-<div id="buttons-here"></div>
-
-<form id="characters-form">
-    <label for="character-input">Enter a Character</label>
-    <input type="text" id="character-input">
-    <input id="addCharacter" type="submit" value="Submit">
-</form>
+<div class="container">
+    <div class="jumbotron" id="head">CHARACTER GIF SEARCH</div>
+    <div class="row" id="bandi">
+        <p>Click a button to display character gifs!</p>
+        <p>Click each gif to turn on and off animation!</p>
+        <p>Submit a character to create new buttons!</p>
+        <div id="buttons-here"></div>
+    </div>
+    <div class="row" id="input-here">
+       <form id="characters">
+                <label for="character-input">Enter a Character: </label>
+                <input type="text" id="character-input">
+                <button class="btn btn-default" id="addCharacter" type="submit">Submit</button>
+            </form>
+    </div>
+    <div class="row"> 
+        <div id="gifs-here"></div>
+    </div>    
+</div>
     
-<div id="gifs-here"></div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" 
 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
 crossorigin="anonymous"></script> 

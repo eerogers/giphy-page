@@ -1,0 +1,69 @@
+body {
+    background-color: lightgray;
+}
+#head {
+    background-color: darkmagenta;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    margin: 0px;
+}
+
+p {
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+form {
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+}
+
+#bandi {
+    text-align: center;
+}
+
+#gifBox {
+    float: left;
+    margin: 20px;
+}
+
+#bandi {
+    padding: 20px;
+
+}
+#buttons-here {
+    margin: 20px 0px 0px 0px;
+}
+
+#input-here {
+    margin: 20px;
+}
+
+#gifs-here {
+    text-align: center;
+}
+
+#mygifs {
+    border-radius: 20px;
+}
+
+#rating {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+.btn {
+    background-color: darkmagenta;
+    color: white;
+    margin: 5px 5px 5px 5px;
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: darkorchid;
+    color: white;
+}
