@@ -15,19 +15,16 @@ function newButtons() {
 $(document).on("click", ".char", function() {
     $("#gifs-here").empty()
     searchedChar = $(this).text()
-    console.log(searchedChar)
     var urlQuery = "https://api.giphy.com/v1/gifs/search?q="+ searchedChar +"&api_key=0BHreSVKUHEx9DxgKhaU0MTkNOI4MJUW"
     $.ajax({
         url : urlQuery,
         method: "GET"
     }).then(function(response) {
-        console.log(response)
         var isStill=true
         for(i=0; i<15; i++) {
             var displayedImage = (response.data[i].images.fixed_height_still.url)
             var displayedRating = (response.data[i].rating)
             $("#gifs-here").append("<div id='gifBox'><div id='rating'>Rating: "+displayedRating+"</div>"+"<img id='mygifs' data='"+i+"' src='"+displayedImage+"'></div>")
-            console.log(response.data[i].images.fixed_height.url)
         }
         $(document).on("click", "#mygifs", function(){
             var movingImage = response.data[$(this).attr("data")].images.fixed_height.url
@@ -48,14 +45,7 @@ $(document).on("click", ".char", function() {
 $("#addCharacter").on("click", function() {
     event.preventDefault()
     var newChar = ($("#character-input").val())
-    console.log(newChar)
     characterList.push(newChar)
-    console.log(characterList)
     newButtons()
 })
-
-
-//API key: 0BHreSVKUHEx9DxgKhaU0MTkNOI4MJUW
-//
-//might need to make https
 })
